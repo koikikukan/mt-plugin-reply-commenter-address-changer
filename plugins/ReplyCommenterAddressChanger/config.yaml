@@ -1,0 +1,25 @@
+# ReplyCommenterAddressChanger
+#
+# Release 0.01 (Dec 21, 2010)
+#
+# Copyright (c) 2004-2010 Yujiro Araki
+
+name: ReplyCommenterAddressChanger
+id: ReplyCommenterAddressChanger
+version: 0.01
+author_link: http://www.koikikukan.com/
+author_name: Yujiro Araki
+plugin_link: http://www.koikikukan.com/archives/2010/12/21-015555.php
+doc_link: http://www.koikikukan.com/archives/2010/12/21-015555.php
+description: <__trans phrase="Change email address of reply commenter.">
+l10n_lexicon:
+    ja:
+        Change email address of reply commenter.: コメント投稿時、返信元コメント投稿者に送信されるメールのFromアドレスを変更します。
+        From email address: 'From: に表示するメールアドレス'
+blog_config_template: blog_config.tmpl
+settings:
+    eac_mail_address:
+        scope: blog
+        default: ''
+callbacks:
+    api_post_save.comment: $ReplyCommenterAddressChanger::ReplyCommenterAddressChanger::Comments::change_email_address
