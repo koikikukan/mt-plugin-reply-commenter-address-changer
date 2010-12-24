@@ -1,6 +1,7 @@
 # ReplyCommenterAddressChanger
 #
 # Release 0.01 (Dec 21, 2010)
+# Release 0.02 (Dec 24, 2010) fix bug
 #
 # Copyright (c) 2004-2010 Yujiro Araki
 
@@ -18,7 +19,7 @@ l10n_lexicon:
         From email address: 'From: に表示するメールアドレス'
 blog_config_template: blog_config.tmpl
 settings:
-    eac_mail_address:
+    mail_address:
         scope: blog
         default: ''
 callbacks:
